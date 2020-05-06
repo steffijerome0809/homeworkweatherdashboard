@@ -1,0 +1,61 @@
+/* .text-center {
+  background-color: slategrey;
+  border-top: 50px;
+}
+
+.card {
+  height: 500px;
+  width: 300px;
+  margin-left: 20px;
+} */
+
+html {
+  background-color: whitesmoke;
+}
+header {
+  background-color: rgb(43, 226, 89);
+  color: blue;
+  margin-bottom: -0.5%;
+  padding: 1%;
+}
+.background {
+  background-color: lightgoldenrodyellow;
+}
+
+.input-group {
+  padding: 5%;
+}
+
+.col-margin {
+  margin: 1%;
+}
+
+.sidebar {
+  margin-top: 0.5%;
+}
+aside {
+  background-color: lightskyblue;
+}
+.item {
+  padding-left: 12%;
+}
+#forecast {
+  margin-top: 1.5%;
+}
+/* .lone-day {
+  background-color: teal;
+  color: white;
+  padding: 1%;
+  margin: 3%;
+} */
+/* 
+.day5 {
+  background-color: teal;
+  color: white;
+  padding: 1%;
+  margin: 3%;
+} */
+
+.card {
+  margin-left: 5%;
+}
