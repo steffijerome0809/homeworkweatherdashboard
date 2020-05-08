@@ -1,10 +1,15 @@
-var ifcityExists = [""];
 var city = JSON.parse(localStorage.getItem("city")) || [];
 
 var apiKey = "5e4c82fbd0742f2ed879eca39e3192ea";
 
 // This function captures the location to be displayed from the response and takes the temp,humidity,wind speed
 // units=imperial will convert the temperature to F
+
+function defaultSearch(searchName) {
+  $("#inputSearch").val(searchName);
+  getData();
+  //$("#inputSearch").val("");
+}
 
 function getData() {
   var searchparam = $("#inputSearch").val();
@@ -99,16 +104,7 @@ function searchCity(inputcity) {
     city.push(inputcity);
     localStorage.setItem("city", JSON.stringify(city));
     rendercityHistory();
-  }
-
-  // for (i = 0; i < ifcityExists.length; i++) {
-  //   if (inputcity === ifcityExists[i]) {
-  //     ifcityExists.splice(i, 0);
-  //   }
-  //   ifcityExists.push(inputcity);
-  //
-  // }
-  else {
+  } else {
     console.log("it exists");
   }
 }
@@ -117,11 +113,9 @@ function rendercityHistory() {
   $(".item").empty();
   for (i = 0; i < city.length; i++) {
     $(".input-group").after(
-      '<p onclick="$(this).text()" class="row item">' + city[i] + "</p>"
+      '<a href="#" onclick="defaultSearch($(this).text())" class="row item">' +
+        city[i] +
+        "</a>"
     );
-    //$(".iem").remove();
-    //localStorage.clear();
   }
-
-  // localStorage.setItem("city", JSON.stringify(city));
 }
