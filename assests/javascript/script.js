@@ -80,7 +80,7 @@ function getData() {
         forecastDate
           .children(".icon")
           .html(
-            '<img src="https://openweathermap.org/img/wn/' +
+            '<img src="https://openweathermap.org/img/w/' +
               forecastIcon +
               '.png" alt="weather icon">'
           );
