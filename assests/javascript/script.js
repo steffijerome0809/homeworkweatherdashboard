@@ -45,7 +45,7 @@ function getData() {
     // A new ajax funciton is called to include api for uv index
 
     $.get(
-      "http://api.openweathermap.org/data/2.5/uvi?appid=5e4c82fbd0742f2ed879eca39e3192ea&lat=" +
+      "https://api.openweathermap.org/data/2.5/uvi?appid=5e4c82fbd0742f2ed879eca39e3192ea&lat=" +
         response.coord.lat +
         "&lon=" +
         response.coord.lon +
@@ -58,7 +58,7 @@ function getData() {
     // A new ajax function is called right after receiving the response from the previous uv index api
 
     $.get(
-      "http://api.openweathermap.org/data/2.5/forecast?appid=5e4c82fbd0742f2ed879eca39e3192ea&q=" +
+      "https://api.openweathermap.org/data/2.5/forecast?appid=5e4c82fbd0742f2ed879eca39e3192ea&q=" +
         searchparam +
         "&units=imperial"
     ).then(function (forecast) {
